@@ -18,7 +18,7 @@ print("X_test shape:", X_test.shape)
 from sklearn.linear_model import LogisticRegression
 
 # Initialize the model
-model = LogisticRegression()
+model = LogisticRegression(max_iter=1000, class_weight="balanced")
 
 # Train the model 
 model.fit(X_train, y_train.values.ravel())
@@ -29,6 +29,10 @@ print("Model training completed")
 y_pred = model.predict(X_test)
 
 print("Predictions Completed")
+
+y_prob = model.predict_proba(X_test)[:,1]
+print("Sample fraud probabilities:")
+print(y_prob[:20])
 
 # ------------------------------
 # Model Evaluation
@@ -60,4 +64,20 @@ feature_importance = pd.DataFrame({
 
 print("\nFeature Importance:")
 print(feature_importance)
+
+# Saving the trained model
+import joblib
+import os
+
+# Create models folder
+os.makedirs("models", exist_ok=True)
+
+# Save trained model
+joblib.dump(model, "models/fraud_model.pkl")
+
+print("\nModel saved to models/fraud_model.pkl")
+
+
+
+
 
