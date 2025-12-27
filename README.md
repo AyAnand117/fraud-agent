@@ -9,30 +9,35 @@ The system is being actively extended toward API-based deployment using FastAPI.
 ---
 
 ## Project Structure
+
+```
+
 fraud-agent/
-|-- src/
-||--rules/
-|||--engine.py
-||--data_generator.py
-||--eda.py
-||--train_model.py
-||--prediction_pipeline.py
-|--api/
-||--init.py
-||--main.py
-|--data/
-||--raw/
-|||-transactions.csv
-||--processed/
-|||--X_train.csv
-|||--X_test.csv
-|||--y_train.csv
-|||--y_test.csv
-|--models/
-||--fraud_model.pkl
-|--README.md
-|--.gitignore
-|--requirements.txt
+├── src/
+│ ├── rules/
+│ │ └── engine.py
+│ ├── data_generator.py
+│ ├── eda.py
+│ ├── train_model.py
+│ └── prediction_pipeline.py
+├── api/
+│ ├── init.py
+│ └── main.py
+├── data/
+│ ├── raw/
+│ │ └── transactions.csv
+│ └── processed/
+│ ├── transactions_processed.csv
+│ ├── X_train.csv
+│ ├── X_test.csv
+│ ├── y_train.csv
+│ └── y_test.csv
+├── models/
+│ └── logistic_regression.pkl
+├── README.md
+└── .gitignore
+
+```
 
 ---
 
