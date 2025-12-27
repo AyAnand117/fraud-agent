@@ -27,11 +27,11 @@ fraud-agent/
 │ ├── raw/
 │ │ └── transactions.csv
 │ └── processed/
-│ ├── transactions_processed.csv
-│ ├── X_train.csv
-│ ├── X_test.csv
-│ ├── y_train.csv
-│ └── y_test.csv
+│   ├── transactions_processed.csv
+│   ├── X_train.csv
+│   ├── X_test.csv
+│   ├── y_train.csv
+│   └── y_test.csv
 ├── models/
 │ └── logistic_regression.pkl
 ├── README.md
